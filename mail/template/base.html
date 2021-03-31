@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand text text-light" href="#">Contact Employee via gmail</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a href="#" class="nav-link active text text-light">Home</a>
+      </li>
+
+    </ul>
+    <span class="navbar-text">
+        <a href="{% url 'logout' %}" class="btn btn-outline-info navbar-brand text text-light">logout</a>
+    </span>
+      <span class="navbar-text navbar-brand text text-light">welcom  {{ user.username }}</span>
+  </div>
+</nav>
+    <br>
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+<footer class="bg-light text-center text-lg-start">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Mohamed Hgagy </h5>
+
+        <p>
+          My name is mohamed ahmed hgagy.
+            software engineer
+
+        </p>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Social media pages</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="https://www.facebook.com/" class="text-dark">facebook</a>
+          </li>
+          <li>
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="text-dark">gmail</a>
+          </li>
+          <li>
+            <a href="https://github.com/mohamedhgagy" class="text-dark">github</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">linked in</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 mohamed
+    <a class="text-dark" href="#">hgagy</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</div>
+</body>
+</html>
